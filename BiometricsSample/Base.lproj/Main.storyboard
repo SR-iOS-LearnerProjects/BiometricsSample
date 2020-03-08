@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MmJ-gj-uFB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Biometric ID Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="VC" id="BYZ-38-t0r" customClass="ViewController" customModule="BiometricsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2It-yi-ic1">
+                                <rect key="frame" x="67.5" y="430" width="279" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Authenticate with Biometric ID">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="authBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="30r-ow-TW9"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-qh-GTM">
+                                <rect key="frame" x="180.5" y="485" width="53" height="65"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="VtS-Nt-mva"/>
+                                    <constraint firstAttribute="height" constant="67" id="kH4-p8-26q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aM0-qh-GTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IG1-gl-4lJ"/>
+                            <constraint firstItem="2It-yi-ic1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SLu-QN-4a9"/>
+                            <constraint firstItem="aM0-qh-GTM" firstAttribute="top" secondItem="2It-yi-ic1" secondAttribute="bottom" constant="18" id="Z7d-qh-zsI"/>
+                            <constraint firstItem="2It-yi-ic1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bZI-We-YbE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Biometric ID Demo" id="bc4-To-0IL"/>
+                    <connections>
+                        <outlet property="authBtn" destination="2It-yi-ic1" id="dGH-1p-nVh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="121.875"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="0K7-hB-B73">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="HuQ-az-Ph3" customClass="DetailVC" customModule="BiometricsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZK-eO-DdE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biometric Identity Verified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sl-Z4-Zun">
+                                <rect key="frame" x="25" y="430" width="364" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muD-xC-KYr">
+                                <rect key="frame" x="184" y="796" width="46" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnAction:" destination="HuQ-az-Ph3" eventType="touchUpInside" id="JyA-OB-aOq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5n-82-wwU">
+                                <rect key="frame" x="177" y="359" width="60" height="49.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Clz-9t-Q1L"/>
+                                    <constraint firstAttribute="width" constant="60" id="mMh-5N-0JX"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="faceid" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4sl-Z4-Zun" firstAttribute="centerY" secondItem="VZK-eO-DdE" secondAttribute="centerY" id="3cI-dB-pZw"/>
+                            <constraint firstItem="4sl-Z4-Zun" firstAttribute="centerX" secondItem="VZK-eO-DdE" secondAttribute="centerX" id="eVo-R8-6SA"/>
+                            <constraint firstItem="muD-xC-KYr" firstAttribute="centerX" secondItem="VZK-eO-DdE" secondAttribute="centerX" id="hTZ-jm-idN"/>
+                            <constraint firstItem="4sl-Z4-Zun" firstAttribute="top" secondItem="r5n-82-wwU" secondAttribute="bottom" constant="20" id="lFw-K8-A1X"/>
+                            <constraint firstItem="r5n-82-wwU" firstAttribute="centerX" secondItem="VZK-eO-DdE" secondAttribute="centerX" id="wOj-LW-0xQ"/>
+                            <constraint firstItem="Fip-Su-qyD" firstAttribute="bottom" secondItem="muD-xC-KYr" secondAttribute="bottom" constant="30" id="xmq-bl-R7v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fip-Su-qyD"/>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="muD-xC-KYr" id="ESF-VZ-3C8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTs-dw-Szo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718.840579710145" y="121.875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dCE-Vc-U6z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MmJ-gj-uFB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hyN-UC-iZM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FGH-Fb-Yk6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kaz-dg-tEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.up" catalog="system" width="60" height="64"/>
+        <image name="faceid" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
